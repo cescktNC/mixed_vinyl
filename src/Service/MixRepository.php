@@ -3,6 +3,7 @@
 namespace App\Service;
 
 use Psr\Cache\CacheItemInterface;
+use Symfony\Bridge\Twig\Command\DebugCommand;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Contracts\Cache\CacheInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
@@ -26,7 +27,9 @@ class MixRepository
         private HttpClientInterface $githubContentClient,
         private CacheInterface $cache,
         #[Autowire('%kernel.debug%')]
-        private bool $isDebug
+        private bool $isDebug,
+        #[Autowire(service: 'twig.command.debug')]
+        private DebugCommand $twigDebugCommand
     )
     {
     }
