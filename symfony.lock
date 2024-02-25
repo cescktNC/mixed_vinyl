@@ -5,6 +5,12 @@
     "monolog/monolog": {
         "version": "2.3.5"
     },
+    "paragonie/random_compat": {
+        "version": "v9.99.100"
+    },
+    "paragonie/sodium_compat": {
+        "version": "v1.20.0"
+    },
     "psr/cache": {
         "version": "3.0.0"
     },
